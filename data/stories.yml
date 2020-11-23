@@ -1,0 +1,113 @@
+version: "2.0"
+
+stories:
+
+
+- story: Dizer adeus sempre que o usuário disser
+  steps:
+  - intent: despedida
+  - action: utter_agradecimento
+
+- story: Fallback
+  steps:
+  - intent: out_of_scope
+  - action: utter_nao_compreendo
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+
+- story: interactive_story_2
+  steps:
+  - intent: despedida
+  - action: utter_agradecimento
+
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Pelotas
+    - unidade: RS
+
+
+
+- story: Complete_story_happy_path
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Pelotas
+    - unidade: RS
+  - slot_was_set:
+    - localidade: Pelotas
+  - slot_was_set:
+    - unidade: RS
+  - action: ActionBuscarNumero
+  - action: utter_pronto
+  - intent: resposta
+    entities:
+    - yes: Sim
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - no: Não
+  - action: utter_agradecimento
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Pelotas
+    - unidade: RS
+  - slot_was_set:
+    - localidade: Pelotas
+  - slot_was_set:
+    - unidade: RS
+  - action: ActionBuscarNumero
+  - action: utter_pronto
+
+
+- story: search_story
+  steps:
+  - intent: busca
+    entities:
+    - unidade: SP
+    - localidade: São Paulo
+  - slot_was_set:
+    - localidade: São Paulo
+  - slot_was_set:
+    - unidade: SP
+  - action: ActionBuscarNumero
+  - action: utter_pronto
+
+- story: interactive_story_2
+  steps:
+  - intent: busca
+    entities:
+    - unidade: SP
+    - localidade: São Paulo
+  - slot_was_set:
+    - localidade: São Paulo
+  - slot_was_set:
+    - unidade: SP
+  - action: ActionBuscarNumero
+  - action: utter_pronto
+  - intent: resposta
+    entities:
+    - yes: Sim
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Sim
+  - action: utter_desejo

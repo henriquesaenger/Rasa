@@ -1,0 +1,56 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- saudacao
+- resposta
+- busca
+- despedida
+- out_of_scope
+- cidades
+- estados
+entities:
+- localidade
+- no
+- unidade
+- yes
+slots:
+  atualizacao:
+    type: text
+    influence_conversation: true
+  dias:
+    type: list
+    influence_conversation: true
+  localidade:
+    type: text
+    influence_conversation: true
+  maxima:
+    type: list
+    influence_conversation: true
+  minima:
+    type: list
+    influence_conversation: true
+  unidade:
+    type: text
+    influence_conversation: true
+responses:
+  utter_posso_ajudar:
+  - text: Olá, eu sou Temporal, um bot que consegue te informar a previsão do tempo na cidade que você desejar!
+  utter_desejo:
+  - text: Escreva o estado e a cidade no seguinte formato 'Brasília DF' por gentileza, senão terei dificuldades para entender :S
+  utter_nao_compreendo:
+  - text: Me desculpe, mas poderia repetir? Eu não consegui entender
+  utter_pronto:
+  - text: Aqui está, consegui o que você queria?(Sim ou Não)
+  utter_mais:
+  - text: deseja saber de mais alguma cidade? (Sim ou Não)
+  utter_agradecimento:
+  - text: Se for chover, lembre-se de levar um guarda-chuva, volte sempre que precisar!
+actions:
+- ActionBuscarNumero
+- utter_agradecimento
+- utter_desejo
+- utter_mais
+- utter_posso_ajudar
+- utter_pronto
+version: '2.0'
