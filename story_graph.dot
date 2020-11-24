@@ -1,0 +1,28 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class=active, fontsize=12, label=action_session_start];
+2 [class=active, fontsize=12, label=utter_posso_ajudar];
+3 [class=active, fontsize=12, label=utter_desejo];
+4 [class="", fontsize=12, label=ActionBuscarNumero];
+5 [class="", fontsize=12, label=utter_pronto];
+9 [class="", fontsize=12, label=utter_agradecimento];
+"-4" [class=ellipsis, label="..."];
+18 [class="intent dashed active", label="  ?  ", shape=rect];
+19 [class="intent active", fillcolor=lightblue, label=opa, shape=rect, style=filled];
+20 [class=intent, fillcolor=lightblue, label="Blumenau SC", shape=rect, style=filled];
+21 [class=intent, fillcolor=lightblue, label="Até +", shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 19  [class=active, key=0];
+2 -> 3  [class=active, key=NONE, label=""];
+3 -> 18  [class=active, key=NONE, label=""];
+3 -> 20  [class="", key=0];
+3 -> 21  [class="", key=0];
+4 -> 5  [class="", key=NONE, label=""];
+5 -> "-4"  [class="", key=NONE, label=""];
+9 -> "-1"  [class="", key=NONE, label=""];
+19 -> 2  [class=active, key=0];
+20 -> 4  [class="", key=0];
+21 -> 9  [class="", key=0];
+}
