@@ -7,6 +7,12 @@ rules:
   - intent: despedida
   - action: utter_agradecimento
 
+- rule: Start
+  steps:
+  - intent: Start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+
 - rule: Fallback
   steps:
   - intent: out_of_scope

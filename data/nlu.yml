@@ -8,7 +8,14 @@ nlu:
     - Boa tarde
     - Boa noite
     - Opa
+    - Temporal meu amigo
+    - Temporal
     - E aí
+    - E ai meu jovem
+    - Fala meu consagrado
+    - Fala meu chefe
+    - Oi bot
+    - Como vai Temporal?
     - Como vai
     - Oie
     - Fala
@@ -18,6 +25,12 @@ nlu:
     - oi
     - ola
     - olá
+    - Fala meu bom
+    - Ola
+    - Opa meu bom
+    - e ai meu jovem
+    - Falae meu parceiro
+    - Opa meu parceiro
 - intent: busca
   examples: |
     - [São Paulo](localidade) [SP](unidade)
@@ -29,9 +42,21 @@ nlu:
     - Tem a previsão de [Brasília](localidade) [DF](unidade)
     - Teria como me dizer como vai ser essa semana em [Uruguaiana](localidade) [RS](unidade)
     - [Pelotas](localidade) [RS](unidade)
-    - [Pelotas](localidade) [RS](unidade)
     - Queria saber o tempo em [SP](unidade) [São Paulo](localidade)
     - Por favor, me informe a previsão em [SC](unidade) [Blumenau](localidade)
+    - [Porto Alegre](localidade) [RS](unidade)
+    - Queria saber o tempo em [Blumenau](localidade) [SC](unidade)
+    - [rs](unidade) [pelotas](localidade)
+    - quero ter uma ideia do clima em [Ribeirão Preto](localidade) [SP](unidade)
+    - Me fala a previsão pra [Varginha](localidade) [MG](unidade)
+    - Se tu pudesse me dizer a previsão pra [Tabaporã](localidade) [MT](unidade)
+    - Qual a temperatura em [MG](unidade) [Padre Paraíso](localidade)
+    - Como é que ta o tempo em [Gado Bravo](localidade) [PB](unidade)
+    - Manda o tempo em [Paço do Lumiar](localidade) [MA](unidade)
+    - Vou viajar pra [Flores](localidade) [PE](unidade) e queria saber como ta o tempo lá
+    - Meu pai mora em [Guarujá](localidade) [SP](unidade), queria saber como ta o tempo por lá
+    - Queria saber em [RS](unidade) [Pelotas](localidade)
+    - Poderia me dizer em [Volta Redonda](location) [RJ](unidade)
 - intent: resposta
   examples: |
     - [Sim](yes)
@@ -39,7 +64,7 @@ nlu:
     - [Claro](yes)
     - [Pode ser](yes)
     - Assim está [ótimo](yes)
-    - [Exatamente](yes) o que eu queria 
+    - [Exatamente](yes) o que eu queria
     - [Ok](yes)
     - [Aceito](yes)
     - [Acho uma boa](yes)
@@ -51,17 +76,25 @@ nlu:
     - [Não](no)
     - [N](no)
     - [Nope](no)
-    - [Não precisa](no)
+    - [Não](no) precisa
     - [Assim já está bom](no)
     - [Não quero](no)
     - Isso [não](no) foi o que eu escolhi
-    - [Não](no) era essa cidade que eu queria 
+    - [Não](no) era essa cidade que eu queria
     - [Para por aqui](no)
     - [Melhor não](no)
     - [Nah](no)
     - [Capaz](no)
-    - [Sim](yes)[Sim](yes), muito obrigado
-    - [Sim](yes)
+    - [Sim](yes) [Sim](yes), muito obrigado
+    - [Nao](no)
+    - [Não](no) precisa, muito obrigado
+    - [Queria](yes) saber de mais uma só
+    - [Não quero](no) mais, muito obrigado Temporal
+    - Só mais uma e eu não incomodo mais
+    - y
+    - [Claro](yes) que [sim](yes)
+    - Eu [não](no) sei
+    - [Claro](yes), mais uma só
 - intent: despedida
   examples: |
     - até mais
@@ -70,11 +103,21 @@ nlu:
     - até
     - tchau
     - beijos
+    - to vazando
+    - falo com você depois
+    - Volto outra hora
+    - Vou ter que picar a mula
+    - Preciso sair, dps te chamo
+    - A gente se fala dps
     - té +
+    - Falou
+    - beijinhos
+    - Uma outra hora eu volto
     - Estou indo
     - Vou saindo aqui então
     - tchauzinho
     - bjs
+    - Ate mais
 - intent: out_of_scope
   examples: |
     - Eu tentei
@@ -90,6 +133,17 @@ nlu:
     - Não sei o que tem aqui por perto
     - Vamos sair
     - kkkkkkkkkkkkkkkkkkkkkk
+    - Ja falei com a Tabata pra ver se a gente consegue ir ainda hoje
+    - Fui na padaria e consegui beijinho com o padeiro
+    - Hoje eu saí pra caminhar com o Márcio
+    - www.youtube.com/hw2s456r-4:0
+    - Gado demais
+    - Tem peixe fresco no hotel
+    - Eu gosto de borboletas verdes fritas
+    - Eu fiz um miojo hj e tava mó gostoso
+    - Matei um urso em uma flechada só
+    - Meu pai disse que vai nos levar
+    - O Barcelona ta ganhando
 - lookup: estados
   examples: |
     - [RO](unidade)
