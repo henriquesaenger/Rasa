@@ -27,6 +27,7 @@ class ActionBuscarNumero(Action):
     async def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         city=tracker.get_slot("localidade")            #pega a cidade escolhida
         UF=tracker.get_slot("unidade")                #pega o estado da cidade
+        UF=UF.upper()
         city= unidecode(city)          #tira os acentos da cidade
         city= city.replace(" ", "%20")                      #substitui os espaços por "%20" pelas regras da API
         response= requests.get("http://servicos.cptec.inpe.br/XML/listaCidades?city="+city)    #faz a requisição do número da cidade

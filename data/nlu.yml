@@ -1,3 +1,7 @@
+
+#Tive uma surpresa com o número de exemplos que precisei dar para começar a
+#ter um resultado um pouco mais aceitável.
+
 version: "2.0"
 nlu:
 - intent: saudacao
@@ -31,8 +35,13 @@ nlu:
     - e ai meu jovem
     - Falae meu parceiro
     - Opa meu parceiro
+    - Opa meu cupinxa
+    - opa meu parceirinho
+    - Oi meu parceiro
+    - opa
 - intent: busca
   examples: |
+    - Saber o tempo em [Nova Iguaçu](localidade) [RJ](unidade) seria uma boa
     - [São Paulo](localidade) [SP](unidade)
     - Queria saber o tempo em [Pelotas](localidade) [RS](unidade)
     - [RS](unidade) [Porto Alegre](localidade)
@@ -41,12 +50,12 @@ nlu:
     - Me fale o tempo em [Florianópolis](localidade) [SC](unidade)
     - Tem a previsão de [Brasília](localidade) [DF](unidade)
     - Teria como me dizer como vai ser essa semana em [Uruguaiana](localidade) [RS](unidade)
-    - [Pelotas](localidade) [RS](unidade)
-    - Queria saber o tempo em [SP](unidade) [São Paulo](localidade)
+    - [Alvorada](localidade) [TO](unidade)
+    - Queria saber o tempo em [PI](unidade) [José de Freitas](localidade)
     - Por favor, me informe a previsão em [SC](unidade) [Blumenau](localidade)
     - [Porto Alegre](localidade) [RS](unidade)
     - Queria saber o tempo em [Blumenau](localidade) [SC](unidade)
-    - [rs](unidade) [pelotas](localidade)
+    - [go](unidade) [Gameleira de Goiás](localidade)
     - quero ter uma ideia do clima em [Ribeirão Preto](localidade) [SP](unidade)
     - Me fala a previsão pra [Varginha](localidade) [MG](unidade)
     - Se tu pudesse me dizer a previsão pra [Tabaporã](localidade) [MT](unidade)
@@ -54,9 +63,81 @@ nlu:
     - Como é que ta o tempo em [Gado Bravo](localidade) [PB](unidade)
     - Manda o tempo em [Paço do Lumiar](localidade) [MA](unidade)
     - Vou viajar pra [Flores](localidade) [PE](unidade) e queria saber como ta o tempo lá
-    - Meu pai mora em [Guarujá](localidade) [SP](unidade), queria saber como ta o tempo por lá
-    - Queria saber em [RS](unidade) [Pelotas](localidade)
+    - Meu pai mora em [Guarujá](localidade) [sp](unidade), queria saber como ta o tempo por lá
+    - Queria saber em [ES](unidade) [Laranja da Terra](localidade)
     - Poderia me dizer em [Volta Redonda](location) [RJ](unidade)
+    - Semana que vem eu vou a [Teófilo Otoni](localidade) [MG](unidade)
+    - Irei me mudar para [Conceição do Lago Açu](localidade) [MA](unidade) essa semana, queria saber o tempo lá
+    - Amanhã vou trabalhar cedo, qual a previsão pra [Pedra Grande](localidade) [RN](unidade)
+    - Queria saber o tempo em [Pedras Altas](localidade) [RS](unidade)
+    - parceiro, me fala o tempo em [Pedra Branca do Amapari](localidade) [AP](unidade) por favor
+    - [Bela Vista do Toldo](localidade) [SC](unidade)
+    - Me fala o tempo em [Baía da Traição](localidade) [PB](unidade)
+    - Poderia me dizer a previsao pra [Belém do Brejo do Cruz](localidade) [PB](unidade)
+    - Teria como me dizer o tempo em [Oeiras do Pará](localidade) [PA](unidade)
+    - [Nova Petropolis](localidade) [RS](unidade)
+    - Manda o tempo em [Novo Oriente de Minas](localidade) [MG](unidade)
+    - [PR](unidade) [Flor da Serra do Sul](localidade)
+    - [rn](unidade) [Francisco Dantas](localidade)
+    - [Santa Bárbara do Monte Verde](localidade) [MG](unidade)
+    - queria saber em [São Sebastião de Lagoa de Roça](localidade) [PB](unidade)
+    - [São Valério da Natividade](localidade) [TO](unidade)
+    - [Santa Maria da Boa Vista](localidade) [PE](unidade)
+    - [Senador Rui Palmeira](localidade) [AL](unidade)
+    - [PE](unidade) [Santa Maria do Cambucá](localidade)
+    - [São José da Tapera](localidade) [AL](unidade)
+    - [São José da Coroa Grande](localidade) [PE](unidade)
+    - [Serranópolis do Iguaçu](localidade) [PR](unidade)
+    - [São Miguel da Baixa Grande](localidade) [PI](unidade)
+    - [PR](unidade) [Nova Esperança do Sudoeste](localidade)
+    - [Nhamundá](localidade) [AM](unidade)
+    - [Nossa Senhora do Socorro](localidade) [SE](unidade)
+    - [PR](unidade) [Nossa Senhora das Graças](localidade)
+    - [Nova Olinda do Maranhão](localidade) [MA](unidade)
+    - [Olho d'Água do Borges](localidade) [RN](unidade)
+    - [Oriximiná](localidade) [PA](unidade)
+    - Queria muito saber como vai estar o tempo em [Ouro Preto do Oeste](localidade) [RO](unidade)
+    - queria ter uma ideia da temperatura em [Orizona](localidade) [GO](unidade)
+    - me da uma palha da temperatura em [Alvorada do Gurgueia](localidade) [PI](unidade)
+    - me fala em [Armação dos Búzios](localidade) [RJ](unidade)
+    - [Assis Chateaubriand](localidade) [PR](unidade)
+    - [Aurelino Leal](localidade) [BA](unidade)
+    - [Queimadas](localidade) [PB](unidade)
+    - [Quatro Barras](location) [PR](unidade)
+    - [Quatro Barras](localidade) [PR](unidade)
+    - Gostaria de saber o tempo em [Rio Brilhante](localidade) [MS](unidade)
+    - [Tijucas do Sul](localidade) [PR](unidade)
+    - [Timbaúba dos Batistas](localidade) [RN](unidade)
+    - [Virgem da Lapa](localidade) [MG](unidade)
+    - [Itatiba do Sul](localidade) [RS](unidade)
+    - [SE](unidade) [Ilha das Flores](localidade)
+    - [Bela Vista do Piauí](localidade) [PI](unidade)
+    - [Conceição de Macabu](localidade) [RJ](unidade)
+    - [Francisco Badaró](localidade) [MG](unidade)
+    - [Santo Antônio de Leverger](localidade) [MT](unidade)
+    - queria saber como ta em [São Miguel de Taipu](localidade) [PB](unidade)
+    - manda pra mim a temperatura em [Santo Antônio do Descoberto](localidade) [GO](unidade)
+    - vou viajar semana que vem pra [Santo Antônio de Pádua](localidade) [RJ](unidade), me fala quantos graus ta fazendo la
+    - sabe me dizer como ta em [Santo Amaro das Brotas](localidade) [SE](unidade)
+    - [São José dos Campos](localidade) [SP](unidade)
+    - [São Luís Gonzaga do Maranhão](localidade) [MA](unidade)
+    - [Sucupira do Riachão](localidade) [MA](unidade)
+    - [Santo Antônio do Monte](localidade) [MG](unidade)
+    - queria saber a previsão pra [São Luís do Quitunde](localidade) [AL](unidade)
+    - como ta o tempo em [São Francisco de Assis do Piauí](localidade) [PI](unidade)
+    - vou encontrar um amigo em [Jesúpolis](localidade) [GO](unidade), como ta por lá
+    - [Jardim de Piranhas](localidade) [RN](unidade)
+    - como ta em [Igaraçu do Tietê](localidade)-[SP](unidade)
+    - [Ichu](localidade)-[BA](unidade) me parece um ótimo destino
+    - Me fala como vai ta em [Jerônimo Monteiro](localidade) [ES](unidade)
+    - Como ta por [Jundiaí do Sul](localidade) - [PR](unidade)
+    - Temporal, como ta o tempo em [José Gonçalves de Minas](localidade)/[MG](unidade)
+    - Temporal, pode me falar como ta em [Jaramataia](localidade)/[AL](unidade)
+    - [Juarez Távora](localidade)-[PB](unidade) ta como meu amigo
+    - [Jardim do Seridó](localidade) [RN](unidade)
+    - [Jaboatão dos Guararapes](localidade)/[PE](unidade)
+    - [Limoeiro do Norte](localidade)-[CE](unidade)
+    - [Lagoa de Dentro](localidade)/[PB](unidade)
 - intent: resposta
   examples: |
     - [Sim](yes)
@@ -91,10 +172,29 @@ nlu:
     - [Queria](yes) saber de mais uma só
     - [Não quero](no) mais, muito obrigado Temporal
     - Só mais uma e eu não incomodo mais
-    - y
     - [Claro](yes) que [sim](yes)
     - Eu [não](no) sei
     - [Claro](yes), mais uma só
+    - [Queria](yes) saber em mais uma se der
+    - [Não](no), assim já está [ótimo](yes)
+    - [Vou querer](yes)
+    - Vou precisar sair, [vamos parar](no) por aqui hoje
+    - To [sem tempo](no) agora, uma outra hora
+    - To afim de mais uma
+    - [Não](no), era só isso mesmo
+    - Queria ver mais uma
+    - [Queria](yes) bastante
+    - [Não quero](no) [não](no)
+    - [Gostaria](yes)
+    - Gostaria [sim](yes)
+    - [Não](no), muito obrigado pela ajuda
+    - [Mais](yes) uma
+    - [Não](no), valeu
+    - [Quero](yes) [sim](yes)
+    - Se eu puder [sim](yes)
+    - Tem mais uma cidade que eu [queria](yes)
+    - [Assis Brasil](localidade) [AC](unidade)
+    - [Claro](yes), se eu puder
 - intent: despedida
   examples: |
     - até mais
@@ -118,6 +218,9 @@ nlu:
     - tchauzinho
     - bjs
     - Ate mais
+    - [Sem](no) tempo irmão, valeu falou
+    - To vazando aqui, até mais
+    - Tenho que sair, depois eu volto
 - intent: out_of_scope
   examples: |
     - Eu tentei
@@ -144,6 +247,15 @@ nlu:
     - Matei um urso em uma flechada só
     - Meu pai disse que vai nos levar
     - O Barcelona ta ganhando
+    - Caí de um barranco semana passada
+    - Pão com manteiga só
+    - Tentei controlar mas tava muito frio
+    - Recém eu fui no mercado e voltei
+    - To trabalhando na Almirante Tamandaré ali
+    - Farpa trocada não dói
+    - Tentei juntar os pedaços mas não ta dando certo
+    - Qual o melhor pão
+    - 
 - lookup: estados
   examples: |
     - [RO](unidade)

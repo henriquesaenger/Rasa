@@ -2,16 +2,17 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- start
-- resposta
-- saudacao
 - busca
+- saudacao
 - out_of_scope
+- resposta
+- start
 - despedida
 - cidades
 - estados
 entities:
 - localidade
+- location
 - no
 - unidade
 - yes
@@ -42,7 +43,7 @@ responses:
   utter_nao_compreendo:
   - text: Me desculpe, mas poderia repetir? Eu não consegui entender
   utter_mais:
-  - text: Aqui está, deseja saber de mais alguma cidade? (Sim ou Não)
+  - text: Deseja saber de mais alguma cidade? (Sim ou Não)
   utter_agradecimento:
   - text: Se for chover, lembre-se de levar um guarda-chuva, volte sempre que precisar!
 actions:

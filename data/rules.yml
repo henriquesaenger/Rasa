@@ -7,6 +7,20 @@ rules:
   - intent: despedida
   - action: utter_agradecimento
 
+- rule: Busca
+  steps:
+  - intent: busca
+    entities:
+    - localidade: Assis Chateaubriand
+    - unidade: PR
+  - slot_was_set:
+    - localidade: Assis Chateaubriand
+  - slot_was_set:
+    - unidade: PR
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  
+
 - rule: Start
   steps:
   - intent: Start

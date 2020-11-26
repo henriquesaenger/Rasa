@@ -1,3 +1,8 @@
+
+#Tive bastante problemas para entender a lógica das stories e ainda tenho certa dificuldade
+#nisso o comando "rasa interactive" me ajudou bastante na construção, porém é algo que eu preciso
+#dar mais atenção.
+
 version: "2.0"
 
 stories:
@@ -128,6 +133,7 @@ stories:
   - slot_was_set:
     - unidade: rs
   - action: ActionBuscarNumero
+  - action: utter_mais
 
 - story: interactive_story_1
   steps:
@@ -251,6 +257,7 @@ stories:
   - slot_was_set:
     - unidade: PE
   - action: ActionBuscarNumero
+  - action: utter_mais
 
 - story: interactive_story_1
   steps:
@@ -310,3 +317,1335 @@ stories:
   - slot_was_set:
     - unidade: RJ
   - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Pedras Altas
+    - unidade: RS
+  - slot_was_set:
+    - localidade: Pedras Altas
+  - slot_was_set:
+    - unidade: RS
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Sim
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Pedra Branca do Amapari
+    - unidade: AP
+  - slot_was_set:
+    - localidade: Pedra Branca do Amapari
+  - slot_was_set:
+    - unidade: AP
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Queria
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Bela Vista do Toldo
+    - unidade: SC
+  - slot_was_set:
+    - localidade: Bela Vista do Toldo
+  - slot_was_set:
+    - unidade: SC
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - no: Não
+    - yes: ótimo
+  - action: utter_agradecimento
+
+- story: interactive_story_2
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Baía da Traição
+    - unidade: PB
+  - slot_was_set:
+    - localidade: Baía da Traição
+  - slot_was_set:
+    - unidade: PB
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Vou querer
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Belém do Brejo do Cruz
+    - unidade: PB
+  - slot_was_set:
+    - localidade: Belém do Brejo do Cruz
+  - slot_was_set:
+    - unidade: PB
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_3
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Baía da Traição
+    - unidade: PB
+  - slot_was_set:
+    - localidade: Baía da Traição
+  - slot_was_set:
+    - unidade: PB
+  - slot_was_set:
+    - localidade: Baía da Traição
+  - slot_was_set:
+    - unidade: PB
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Vou querer
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Oeiras do Pará
+    - unidade: PA
+  - slot_was_set:
+    - localidade: Oeiras do Pará
+  - slot_was_set:
+    - unidade: PA
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - no: vamos parar
+  - action: utter_agradecimento
+
+- story: interactive_story_4
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Baía da Traição
+    - unidade: PB
+  - slot_was_set:
+    - localidade: Baía da Traição
+  - slot_was_set:
+    - unidade: PB
+  - slot_was_set:
+    - localidade: Baía da Traição
+  - slot_was_set:
+    - unidade: PB
+  - slot_was_set:
+    - localidade: Baía da Traição
+  - slot_was_set:
+    - unidade: PB
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Vou querer
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Oeiras do Pará
+    - unidade: PA
+  - slot_was_set:
+    - localidade: Oeiras do Pará
+  - slot_was_set:
+    - unidade: PA
+  - slot_was_set:
+    - localidade: Oeiras do Pará
+  - slot_was_set:
+    - unidade: PA
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - no: sem tempo
+  - action: utter_agradecimento
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Nova Petropolis
+    - unidade: RS
+  - slot_was_set:
+    - localidade: Nova Petropolis
+  - slot_was_set:
+    - unidade: RS
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+  - action: utter_desejo
+  - intent: out_of_scope
+  - action: utter_nao_compreendo
+  - intent: out_of_scope
+  - action: utter_nao_compreendo
+  - intent: busca
+    entities:
+    - localidade: Novo Oriente de Minas
+    - unidade: MG
+  - slot_was_set:
+    - localidade: Novo Oriente de Minas
+  - slot_was_set:
+    - unidade: MG
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - no: Não
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - unidade: PR
+    - localidade: Flor da Serra do Sul
+  - slot_was_set:
+    - localidade: Flor da Serra do Sul
+  - slot_was_set:
+    - unidade: PR
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: despedida
+    entities:
+    - no: Sem
+  - action: utter_agradecimento
+
+- story: interactive_story_2
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - unidade: PR
+    - localidade: Flor da Serra do Sul
+  - slot_was_set:
+    - localidade: Flor da Serra do Sul
+  - slot_was_set:
+    - unidade: PR
+  - slot_was_set:
+    - localidade: Flor da Serra do Sul
+  - slot_was_set:
+    - unidade: PR
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: despedida
+  - action: utter_agradecimento
+
+- story: interactive_story_3
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - unidade: PR
+    - localidade: Flor da Serra do Sul
+  - slot_was_set:
+    - localidade: Flor da Serra do Sul
+  - slot_was_set:
+    - unidade: PR
+  - slot_was_set:
+    - localidade: Flor da Serra do Sul
+  - slot_was_set:
+    - unidade: PR
+  - slot_was_set:
+    - localidade: Flor da Serra do Sul
+  - slot_was_set:
+    - unidade: PR
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: despedida
+  - action: utter_agradecimento
+
+- story: interactive_story_4
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - unidade: rn
+    - localidade: Francisco Dantas
+  - slot_was_set:
+    - localidade: Francisco Dantas
+  - slot_was_set:
+    - unidade: rn
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Santa Bárbara do Monte Verde
+    - unidade: MG
+  - slot_was_set:
+    - localidade: Santa Bárbara do Monte Verde
+  - slot_was_set:
+    - unidade: MG
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São Sebastião de Lagoa de Roça
+    - unidade: PB
+  - slot_was_set:
+    - localidade: São Sebastião de Lagoa de Roça
+  - slot_was_set:
+    - unidade: PB
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Queria
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São Valério da Natividade
+    - unidade: TO
+  - slot_was_set:
+    - localidade: São Valério da Natividade
+  - slot_was_set:
+    - unidade: TO
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: out_of_scope
+  - action: utter_nao_compreendo
+  - intent: resposta
+    entities:
+    - yes: Sim
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Santa Maria da Boa Vista
+    - unidade: PE
+  - slot_was_set:
+    - localidade: Santa Maria da Boa Vista
+  - slot_was_set:
+    - unidade: PE
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_2
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Santa Bárbara do Monte Verde
+    - unidade: MG
+  - slot_was_set:
+    - localidade: Santa Bárbara do Monte Verde
+  - slot_was_set:
+    - unidade: MG
+  - slot_was_set:
+    - localidade: Santa Bárbara do Monte Verde
+  - slot_was_set:
+    - unidade: MG
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São Sebastião de Lagoa de Roça
+    - unidade: PB
+  - slot_was_set:
+    - localidade: São Sebastião de Lagoa de Roça
+  - slot_was_set:
+    - unidade: PB
+  - slot_was_set:
+    - localidade: São Sebastião de Lagoa de Roça
+  - slot_was_set:
+    - unidade: PB
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Queria
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São Valério da Natividade
+    - unidade: TO
+  - slot_was_set:
+    - localidade: São Valério da Natividade
+  - slot_was_set:
+    - unidade: TO
+  - slot_was_set:
+    - localidade: São Valério da Natividade
+  - slot_was_set:
+    - unidade: TO
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: out_of_scope
+  - action: utter_nao_compreendo
+  - intent: resposta
+    entities:
+    - no: Não quero
+    - no: não
+  - action: utter_agradecimento
+
+- story: interactive_story_3
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Santa Bárbara do Monte Verde
+    - unidade: MG
+  - slot_was_set:
+    - localidade: Santa Bárbara do Monte Verde
+  - slot_was_set:
+    - unidade: MG
+  - slot_was_set:
+    - localidade: Santa Bárbara do Monte Verde
+  - slot_was_set:
+    - unidade: MG
+  - slot_was_set:
+    - localidade: Santa Bárbara do Monte Verde
+  - slot_was_set:
+    - unidade: MG
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São Sebastião de Lagoa de Roça
+    - unidade: PB
+  - slot_was_set:
+    - localidade: São Sebastião de Lagoa de Roça
+  - slot_was_set:
+    - unidade: PB
+  - slot_was_set:
+    - localidade: São Sebastião de Lagoa de Roça
+  - slot_was_set:
+    - unidade: PB
+  - slot_was_set:
+    - localidade: São Sebastião de Lagoa de Roça
+  - slot_was_set:
+    - unidade: PB
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Queria
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São Valério da Natividade
+    - unidade: TO
+  - slot_was_set:
+    - localidade: São Valério da Natividade
+  - slot_was_set:
+    - unidade: TO
+  - slot_was_set:
+    - localidade: São Valério da Natividade
+  - slot_was_set:
+    - unidade: TO
+  - slot_was_set:
+    - localidade: São Valério da Natividade
+  - slot_was_set:
+    - unidade: TO
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: out_of_scope
+  - action: utter_nao_compreendo
+  - intent: resposta
+    entities:
+    - yes: Gostaria
+  - action: utter_desejo
+
+- story: interactive_story_1
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Senador Rui Palmeira
+    - unidade: AL
+  - slot_was_set:
+    - localidade: Senador Rui Palmeira
+  - slot_was_set:
+    - unidade: AL
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: out_of_scope
+  - action: utter_nao_compreendo
+  - intent: resposta
+    entities:
+    - yes: Claro
+    - yes: sim
+  - action: utter_desejo
+
+- story: interactive_story_2
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Senador Rui Palmeira
+    - unidade: AL
+  - slot_was_set:
+    - localidade: Senador Rui Palmeira
+  - slot_was_set:
+    - unidade: AL
+  - slot_was_set:
+    - localidade: Senador Rui Palmeira
+  - slot_was_set:
+    - unidade: AL
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: out_of_scope
+  - action: utter_nao_compreendo
+  - intent: resposta
+    entities:
+    - yes: sim
+  - action: utter_desejo
+
+- story: interactive_story_3
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - unidade: PE
+    - localidade: Santa Maria do Cambucá
+  - slot_was_set:
+    - localidade: Santa Maria do Cambucá
+  - slot_was_set:
+    - unidade: PE
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_4
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São José da Tapera
+    - unidade: AL
+  - slot_was_set:
+    - localidade: São José da Tapera
+  - slot_was_set:
+    - unidade: AL
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_5
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São José da Coroa Grande
+    - unidade: PE
+  - slot_was_set:
+    - localidade: São José da Coroa Grande
+  - slot_was_set:
+    - unidade: PE
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_6
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Serranópolis do Iguaçu
+    - unidade: PR
+  - slot_was_set:
+    - localidade: Serranópolis do Iguaçu
+  - slot_was_set:
+    - unidade: PR
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_1
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São Miguel da Baixa Grande
+    - unidade: PI
+  - slot_was_set:
+    - localidade: São Miguel da Baixa Grande
+  - slot_was_set:
+    - unidade: PI
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_2
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Humberto de Campos
+    - unidade: MA
+  - slot_was_set:
+    - localidade: Humberto de Campos
+  - slot_was_set:
+    - unidade: MA
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_3
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - unidade: PR
+    - localidade: Nova Esperança do Sudoeste
+  - slot_was_set:
+    - localidade: Nova Esperança do Sudoeste
+  - slot_was_set:
+    - unidade: PR
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_4
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Nhamundá
+    - unidade: AM
+  - slot_was_set:
+    - localidade: Nhamundá
+  - slot_was_set:
+    - unidade: AM
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_5
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Nossa Senhora do Socorro
+    - unidade: SE
+  - slot_was_set:
+    - localidade: Nossa Senhora do Socorro
+  - slot_was_set:
+    - unidade: SE
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: sim
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - unidade: PR
+    - localidade: Nossa Senhora das Graças
+  - slot_was_set:
+    - localidade: Nossa Senhora das Graças
+  - slot_was_set:
+    - unidade: PR
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_6
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Nova Olinda do Maranhão
+    - unidade: MA
+  - slot_was_set:
+    - localidade: Nova Olinda do Maranhão
+  - slot_was_set:
+    - unidade: MA
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: out_of_scope
+  - action: utter_nao_compreendo
+  - intent: resposta
+    entities:
+    - no: Não
+  - action: utter_agradecimento
+
+- story: interactive_story_7
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Olho d'Água do Borges
+    - unidade: RN
+  - slot_was_set:
+    - localidade: Olho d'Água do Borges
+  - slot_was_set:
+    - unidade: RN
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Mais
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Oriximiná
+    - unidade: PA
+  - slot_was_set:
+    - localidade: Oriximiná
+  - slot_was_set:
+    - unidade: PA
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - no: Não
+  - action: utter_agradecimento
+
+- story: interactive_story_8
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Ouro Preto do Oeste
+    - unidade: RO
+  - slot_was_set:
+    - localidade: Ouro Preto do Oeste
+  - slot_was_set:
+    - unidade: RO
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Orizona
+    - unidade: GO
+  - slot_was_set:
+    - localidade: Orizona
+  - slot_was_set:
+    - unidade: GO
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Quero
+    - yes: sim
+  - action: utter_desejo
+
+- story: interactive_story_2
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Alvorada do Gurgueia
+    - unidade: PI
+  - slot_was_set:
+    - localidade: Alvorada do Gurgueia
+  - slot_was_set:
+    - unidade: PI
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: sim
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Armação dos Búzios
+    - unidade: RJ
+  - slot_was_set:
+    - localidade: Armação dos Búzios
+  - slot_was_set:
+    - unidade: RJ
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: queria
+  - action: utter_desejo
+
+- story: interactive_story_3
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Assis Chateaubriand
+    - unidade: PR
+  - slot_was_set:
+    - localidade: Assis Chateaubriand
+  - slot_was_set:
+    - unidade: PR
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_4
+  steps:
+  - intent: start
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Assis Brasil
+    - unidade: AC
+  - slot_was_set:
+    - localidade: Assis Brasil
+  - slot_was_set:
+    - unidade: AC
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Aurelino Leal
+    - unidade: BA
+  - slot_was_set:
+    - localidade: Aurelino Leal
+  - slot_was_set:
+    - unidade: BA
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_2
+  steps:
+  - intent: busca
+    entities:
+    - localidade: Queimadas
+    - unidade: PB
+  - slot_was_set:
+    - localidade: Queimadas
+  - slot_was_set:
+    - unidade: PB
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_3
+  steps:
+  - intent: busca
+    entities:
+    - localidade: Quatro Barras
+    - unidade: PR
+  - slot_was_set:
+    - localidade: Quatro Barras
+  - slot_was_set:
+    - unidade: PR
+  - action: ActionBuscarNumero
+  - action: utter_mais
+  - intent: resposta
+    entities:
+    - yes: Claro
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Rio Brilhante
+    - unidade: MS
+  - slot_was_set:
+    - localidade: Rio Brilhante
+  - slot_was_set:
+    - unidade: MS
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_4
+  steps:
+  - intent: out_of_scope
+  - action: utter_nao_compreendo
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Tijucas do Sul
+    - unidade: PR
+  - slot_was_set:
+    - localidade: Tijucas do Sul
+  - slot_was_set:
+    - unidade: PR
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_2
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Timbaúba dos Batistas
+    - unidade: RN
+  - slot_was_set:
+    - localidade: Timbaúba dos Batistas
+  - slot_was_set:
+    - unidade: RN
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_3
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Virgem da Lapa
+    - unidade: MG
+  - slot_was_set:
+    - localidade: Virgem da Lapa
+  - slot_was_set:
+    - unidade: MG
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_4
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Itatiba do Sul
+    - unidade: RS
+  - slot_was_set:
+    - localidade: Itatiba do Sul
+  - slot_was_set:
+    - unidade: RS
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_5
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - unidade: SE
+    - localidade: Ilha das Flores
+  - slot_was_set:
+    - localidade: Ilha das Flores
+  - slot_was_set:
+    - unidade: SE
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_6
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Bela Vista do Piauí
+    - unidade: PI
+  - slot_was_set:
+    - localidade: Bela Vista do Piauí
+  - slot_was_set:
+    - unidade: PI
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_7
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Conceição de Macabu
+    - unidade: RJ
+  - slot_was_set:
+    - localidade: Conceição de Macabu
+  - slot_was_set:
+    - unidade: RJ
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_8
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Francisco Badaró
+    - unidade: MG
+  - slot_was_set:
+    - localidade: Francisco Badaró
+  - slot_was_set:
+    - unidade: MG
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_9
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Santo Antônio de Leverger
+    - unidade: MT
+  - slot_was_set:
+    - localidade: Santo Antônio de Leverger
+  - slot_was_set:
+    - unidade: MT
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_10
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São Miguel de Taipu
+    - unidade: PB
+  - slot_was_set:
+    - localidade: São Miguel de Taipu
+  - slot_was_set:
+    - unidade: PB
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_11
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Santo Antônio do Descoberto
+    - unidade: GO
+  - slot_was_set:
+    - localidade: Santo Antônio do Descoberto
+  - slot_was_set:
+    - unidade: GO
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_12
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Santo Antônio de Pádua
+    - unidade: RJ
+  - slot_was_set:
+    - localidade: Santo Antônio de Pádua
+  - slot_was_set:
+    - unidade: RJ
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_13
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Santo Amaro das Brotas
+    - unidade: SE
+  - slot_was_set:
+    - localidade: Santo Amaro das Brotas
+  - slot_was_set:
+    - unidade: SE
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_14
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São José dos Campos
+    - unidade: SP
+  - slot_was_set:
+    - localidade: São José dos Campos
+  - slot_was_set:
+    - unidade: SP
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_1
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São Luís Gonzaga do Maranhão
+    - unidade: MA
+  - slot_was_set:
+    - localidade: São Luís Gonzaga do Maranhão
+  - slot_was_set:
+    - unidade: MA
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_2
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Sucupira do Riachão
+    - unidade: MA
+  - slot_was_set:
+    - localidade: Sucupira do Riachão
+  - slot_was_set:
+    - unidade: MA
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_3
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Santo Antônio do Monte
+    - unidade: MG
+  - slot_was_set:
+    - localidade: Santo Antônio do Monte
+  - slot_was_set:
+    - unidade: MG
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_4
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São Luís do Quitunde
+    - unidade: AL
+  - slot_was_set:
+    - localidade: São Luís do Quitunde
+  - slot_was_set:
+    - unidade: AL
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_5
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: São Francisco de Assis do Piauí
+    - unidade: PI
+  - slot_was_set:
+    - localidade: São Francisco de Assis do Piauí
+  - slot_was_set:
+    - unidade: PI
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_6
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Jesúpolis
+    - unidade: GO
+  - slot_was_set:
+    - localidade: Jesúpolis
+  - slot_was_set:
+    - unidade: GO
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_7
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Jardim de Piranhas
+    - unidade: RN
+  - slot_was_set:
+    - localidade: Jardim de Piranhas
+  - slot_was_set:
+    - unidade: RN
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_8
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Igaraçu do Tietê
+    - unidade: SP
+  - slot_was_set:
+    - localidade: Igaraçu do Tietê
+  - slot_was_set:
+    - unidade: SP
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_9
+  steps:
+  - intent: saudacao
+  - action: utter_posso_ajudar
+  - action: utter_desejo
+  - intent: busca
+    entities:
+    - localidade: Ichu
+    - unidade: BA
+  - slot_was_set:
+    - localidade: Ichu
+  - slot_was_set:
+    - unidade: BA
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_1
+  steps:
+  - intent: busca
+    entities:
+    - localidade: Jardim do Seridó
+    - unidade: RN
+  - slot_was_set:
+    - localidade: Jardim do Seridó
+  - slot_was_set:
+    - unidade: RN
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_2
+  steps:
+  - intent: busca
+    entities:
+    - localidade: Jaboatão dos Guararapes
+    - unidade: PE
+  - slot_was_set:
+    - localidade: Jaboatão dos Guararapes
+  - slot_was_set:
+    - unidade: PE
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_3
+  steps:
+  - intent: busca
+    entities:
+    - localidade: Limoeiro do Norte
+    - unidade: CE
+  - slot_was_set:
+    - localidade: Limoeiro do Norte
+  - slot_was_set:
+    - unidade: CE
+
+- story: interactive_story_4
+  steps:
+  - intent: busca
+    entities:
+    - localidade: Limoeiro do Norte
+    - unidade: CE
+  - slot_was_set:
+    - localidade: Limoeiro do Norte
+  - slot_was_set:
+    - unidade: CE
+  - action: ActionBuscarNumero
+  - action: utter_mais
+
+- story: interactive_story_5
+  steps:
+  - intent: busca
+    entities:
+    - localidade: Lagoa de Dentro
+    - unidade: PB
+  - slot_was_set:
+    - localidade: Lagoa de Dentro
+  - slot_was_set:
+    - unidade: PB
+  - action: ActionBuscarNumero
+  - action: utter_mais
