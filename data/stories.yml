@@ -85,12 +85,12 @@ stories:
   - action: ActionBuscarNumero
   - action: utter_mais
 
-- story: interactive_story_3
+- story: interactive_story_3_1
   steps:
   - intent: saudacao
   - action: utter_posso_ajudar
   - action: utter_desejo
-  - intent: nlu_fallback
+  - intent: out_of_scope
   - action: utter_nao_compreendo
 
 - story: interactive_story_4
@@ -398,7 +398,7 @@ stories:
   - action: ActionBuscarNumero
   - action: utter_mais
 
-- story: interactive_story_3
+- story: interactive_story_3_2
   steps:
   - intent: saudacao
   - action: utter_posso_ajudar
@@ -559,7 +559,7 @@ stories:
   - intent: despedida
   - action: utter_agradecimento
 
-- story: interactive_story_3
+- story: interactive_story_3_3
   steps:
   - intent: saudacao
   - action: utter_posso_ajudar
@@ -720,7 +720,7 @@ stories:
     - no: não
   - action: utter_agradecimento
 
-- story: interactive_story_3
+- story: interactive_story_3_4
   steps:
   - intent: saudacao
   - action: utter_posso_ajudar
@@ -841,7 +841,7 @@ stories:
     - yes: sim
   - action: utter_desejo
 
-- story: interactive_story_3
+- story: interactive_story_3_5
   steps:
   - intent: start
   - action: utter_posso_ajudar
@@ -937,7 +937,7 @@ stories:
   - action: ActionBuscarNumero
   - action: utter_mais
 
-- story: interactive_story_3
+- story: interactive_story_3_6
   steps:
   - intent: start
   - action: utter_posso_ajudar
@@ -1126,7 +1126,7 @@ stories:
     - yes: queria
   - action: utter_desejo
 
-- story: interactive_story_3
+- story: interactive_story_3_7
   steps:
   - intent: start
   - action: utter_posso_ajudar
@@ -1187,7 +1187,7 @@ stories:
   - action: ActionBuscarNumero
   - action: utter_mais
 
-- story: interactive_story_3
+- story: interactive_story_3_8
   steps:
   - intent: busca
     entities:
@@ -1251,7 +1251,7 @@ stories:
   - action: ActionBuscarNumero
   - action: utter_mais
 
-- story: interactive_story_3
+- story: interactive_story_3_9
   steps:
   - intent: saudacao
   - action: utter_posso_ajudar
@@ -1475,7 +1475,7 @@ stories:
   - action: ActionBuscarNumero
   - action: utter_mais
 
-- story: interactive_story_3
+- story: interactive_story_3_10
   steps:
   - intent: saudacao
   - action: utter_posso_ajudar
@@ -1613,7 +1613,7 @@ stories:
   - action: ActionBuscarNumero
   - action: utter_mais
 
-- story: interactive_story_3
+- story: interactive_story_3_11
   steps:
   - intent: busca
     entities:
@@ -1623,6 +1623,8 @@ stories:
     - localidade: Limoeiro do Norte
   - slot_was_set:
     - unidade: CE
+  - action: ActionBuscarNumero
+  - action: utter_mais
 
 - story: interactive_story_4
   steps:

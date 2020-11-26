@@ -127,17 +127,7 @@ nlu:
     - como ta o tempo em [São Francisco de Assis do Piauí](localidade) [PI](unidade)
     - vou encontrar um amigo em [Jesúpolis](localidade) [GO](unidade), como ta por lá
     - [Jardim de Piranhas](localidade) [RN](unidade)
-    - como ta em [Igaraçu do Tietê](localidade)-[SP](unidade)
-    - [Ichu](localidade)-[BA](unidade) me parece um ótimo destino
-    - Me fala como vai ta em [Jerônimo Monteiro](localidade) [ES](unidade)
-    - Como ta por [Jundiaí do Sul](localidade) - [PR](unidade)
-    - Temporal, como ta o tempo em [José Gonçalves de Minas](localidade)/[MG](unidade)
-    - Temporal, pode me falar como ta em [Jaramataia](localidade)/[AL](unidade)
-    - [Juarez Távora](localidade)-[PB](unidade) ta como meu amigo
-    - [Jardim do Seridó](localidade) [RN](unidade)
-    - [Jaboatão dos Guararapes](localidade)/[PE](unidade)
-    - [Limoeiro do Norte](localidade)-[CE](unidade)
-    - [Lagoa de Dentro](localidade)/[PB](unidade)
+
 - intent: resposta
   examples: |
     - [Sim](yes)
@@ -255,7 +245,6 @@ nlu:
     - Farpa trocada não dói
     - Tentei juntar os pedaços mas não ta dando certo
     - Qual o melhor pão
-    - 
 - lookup: estados
   examples: |
     - [RO](unidade)

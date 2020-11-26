@@ -7,7 +7,7 @@ rules:
   - intent: despedida
   - action: utter_agradecimento
 
-- rule: Busca
+- rule: Buscadinha
   steps:
   - intent: busca
     entities:

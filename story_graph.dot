@@ -2,26 +2,8 @@ digraph  {
 0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
 "-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
 1 [class=active, fontsize=12, label=action_session_start];
-2 [class="", fontsize=12, label=ActionBuscarNumero];
-"-4" [class=ellipsis, label="..."];
-7 [class=active, fontsize=12, label=action_session_start];
-8 [class=active, fontsize=12, label=ActionBuscarNumero];
-9 [class=active, fontsize=12, label=utter_mais];
-14 [class="intent dashed active", label="  ?  ", shape=rect];
-15 [class=intent, fillcolor=lightblue, label="Jaboatão dos Guararapes/PE", shape=rect, style=filled];
-16 [class=intent, fillcolor=lightblue, label="Limoeiro do Norte CE", shape=rect, style=filled];
-17 [class="intent active", fillcolor=lightblue, label="Lagoa de Dentro/PB", shape=rect, style=filled];
+2 [class="intent dashed active", label="  ?  ", shape=rect];
 0 -> "-1"  [class="", key=NONE, label=""];
 0 -> 1  [class=active, key=NONE, label=""];
-1 -> 7  [class=active, key=NONE, label=""];
-1 -> 15  [class="", key=0];
-1 -> 16  [class="", key=0];
-2 -> "-4"  [class="", key=NONE, label=""];
-7 -> 17  [class=active, key=0];
-8 -> 9  [class=active, key=NONE, label=""];
-9 -> "-1"  [class="", key=NONE, label=""];
-9 -> 14  [class=active, key=NONE, label=""];
-15 -> 2  [class="", key=0];
-16 -> "-1"  [class="", key=0];
-17 -> 8  [class=active, key=0];
+1 -> 2  [class=active, key=NONE, label=""];
 }
